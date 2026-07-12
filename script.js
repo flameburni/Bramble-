@@ -3,6 +3,8 @@
   const searchBtn = document.getElementById("searchBtn");
   
   const favoritesBtn = document.getElementById("favoritesBtn");
+
+const backBtn = document.getElementById("backBtn");
   
   const errorMsg = document.getElementById("errorMsg");
   
@@ -156,7 +158,6 @@ const errorMsg4 = document.getElementById("errorMsg4");
   })
   
   favoritesBtn.addEventListener("click", async function () {
-    searchResults.innerHTML = "";
     searchResults.style.display = "none";
       recipeDetail.innerHTML = "";
       recipeDetail.style.display = "none";
@@ -164,6 +165,9 @@ const errorMsg4 = document.getElementById("errorMsg4");
       errorMsg.style.display = "none";
       errorMsg2.style.display = "none";
      errorMsg4.style.display = "none";
+    if (searchResults.querySelector(".meal-card")) {
+      backBtn.style.display = "block";
+    }
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     console.log(favorites);
     if (favorites.length === 0) {
@@ -223,3 +227,13 @@ const errorMsg4 = document.getElementById("errorMsg4");
     const id = clickedCard.dataset.id;
     await showRecipeDetails(id);
   })
+
+backBtn.addEventListener("click", function() {
+  favoritesResults.innerHTML = "";
+  favoritesResults.style.display = "none";
+  searchResults.style.display = "grid";
+  recipeDetail.innerHTML = "";
+  recipeDetail.style.display = "none";
+  errorMsg3.style.display = "none";
+  backBtn.style.display = "none";
+})
