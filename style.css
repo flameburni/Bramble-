@@ -33,7 +33,7 @@ h1 {
   font-size: 16px;
 }
 
-#searchBtn, #favoritesBtn {
+#searchBtn, #favoritesBtn, #backBtn {
   padding: 10px 16px;
   border: none;
   border-radius: 6px;
@@ -41,6 +41,8 @@ h1 {
   color: white;
   font-size: 15px;
 }
+
+
 
 #searchResults {
   display: grid;
@@ -127,6 +129,12 @@ h1 {
   border-left: 4px solid #e2622a;
   border-radius: 6px;
   color: #7a3b13;
+}
+
+#emptyState {
+  grid-column: 1 / -1;
+  font-size: 16px;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
