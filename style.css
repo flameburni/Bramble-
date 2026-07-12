@@ -31,6 +31,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
+  outline-color: #e2622a;
 }
 
 #searchBtn, #favoritesBtn, #backBtn {
