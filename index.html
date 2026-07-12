@@ -13,12 +13,17 @@
     <input type="search" id="searchBox" placeholder="Enter an ingredient">
     <button id="searchBtn">Search</button>
     <button id="favoritesBtn">My Favorites</button>
+      <button id="backBtn" style="display: none">Back to Search</button>
     </div>
     <p id="errorMsg" class="notice" style="display: none">Please enter an ingredient.</p>
     <p id="errorMsg2" class="notice" style="display: none">No recipes found!</p>
     <p id="errorMsg3" class="notice" style="display: none">No favorites found!</p>
     <p id="errorMsg4" class="notice" style="display: none">Unable to connect. Please check your internet connection.</p>
-    <div id="searchResults"></div>
+    <div id="searchResults">
+      <p id="emptyState" class="notice">
+        Search an ingredient above to discover recipes, like "chiken" or "garlic"
+      </p>
+    </div>
     <div id="favoritesResults"></div>
     <div id="recipeDetail"></div>
     <script src="script.js"></script>
