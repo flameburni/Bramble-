@@ -218,8 +218,14 @@ const errorMsg4 = document.getElementById("errorMsg4");
         recipeDetail.style.display = "none";
       }
     card.remove();
+      const matchingCard = searchResults.querySelector(`.meal-card[data-id = "${favoriteId}"]`);
+    if (matchingCard) {
+      const starBtn = matchingCard.querySelector(".favorite-btn");
+      starBtn.textContent = "☆";
+    }
       return;
     }
+
     const clickedCard = event.target.closest(".meal-card");
     if (!clickedCard) {
       return;
